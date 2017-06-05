@@ -292,7 +292,7 @@
   URI.decode = decodeURIComponent;
   URI.iso8859 = function() {
     URI.encode = escape;
-    URI.decode = unescape;
+    URI.decode = decodeURI;
   };
   URI.unicode = function() {
     URI.encode = strictEncodeURIComponent;
@@ -2009,7 +2009,7 @@
     var d = URI.decode;
 
     URI.encode = strictEncodeURIComponent;
-    URI.decode = unescape;
+    URI.decode = decodeURI;
     try {
       this.normalize();
     } finally {
